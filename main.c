@@ -1,14 +1,19 @@
-#include "include/raylib.h"
-
+#include "raylib.h"
 int main(void)
 {
-    InitWindow(800, 450, "This is a Template to Create games on linux with raylib");
-    SetTargetFPS(60);
+    const int screenWidth = 800;
+    const int screenHeight = 450;
 
+    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+
+    SetTargetFPS(60);               
     while (!WindowShouldClose())
     {
         BeginDrawing();
+
             ClearBackground(RAYWHITE);
+
+            DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
 
         EndDrawing();
     }
